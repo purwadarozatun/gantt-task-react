@@ -29,6 +29,7 @@ export const Milestone: React.FC<TaskItemProps> = ({
         transform={transform}
         className={styles.milestoneBackground}
         onMouseDown={e => {
+          if(e.button != 0) return;
           isDateChangeable && onEventStart("move", task, e);
         }}
       />

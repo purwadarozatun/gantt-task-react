@@ -33,6 +33,7 @@ export const Bar: React.FC<TaskItemProps> = ({
         styles={task.styles}
         isSelected={isSelected}
         onMouseDown={e => {
+          if(e.button != 0) return;
           isDateChangeable && onEventStart("move", task, e);
         }}
       />

@@ -65,6 +65,7 @@ export const Gantt: React.FunctionComponent<GanttProps> = ({
   onDelete,
   onSelect,
   onExpanderClick,
+  onContextMenu, 
 }) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const taskListRef = useRef<HTMLDivElement>(null);
@@ -422,6 +423,7 @@ export const Gantt: React.FunctionComponent<GanttProps> = ({
     svgWidth,
     rtl,
     setGanttEvent,
+    onContextMenu, 
     setFailedTask,
     setSelectedTask: handleSelectedTask,
     onDateChange,
@@ -444,6 +446,7 @@ export const Gantt: React.FunctionComponent<GanttProps> = ({
     horizontalContainerClass: styles.horizontalContainer,
     selectedTask,
     taskListRef,
+    onContextMenu, 
     setSelectedTask: handleSelectedTask,
     onExpanderClick: handleExpanderClick,
     TaskListHeader,

@@ -46,6 +46,7 @@ export interface EventOption {
    * Invokes on bar double click.
    */
   onDoubleClick?: (task: Task) => void;
+  onContextMenu?: (task: Task) => void;
   /**
    * Invokes on bar click.
    */

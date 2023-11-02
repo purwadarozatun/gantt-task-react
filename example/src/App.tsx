@@ -66,6 +66,9 @@ const App = () => {
     setTasks(tasks.map(t => (t.id === task.id ? task : t)));
     console.log("On expander click Id:" + task.id);
   };
+  const handleContextMenu = (string: Task) => {
+    console.log("On asdas click Id:" + string.id);
+  };
 
   return (
     <div className="Wrapper">
@@ -84,6 +87,7 @@ const App = () => {
         onDoubleClick={handleDblClick}
         onClick={handleClick}
         onSelect={handleSelect}
+        onContextMenu={handleContextMenu}
         onExpanderClick={handleExpanderClick}
         listCellWidth={isChecked ? "155px" : ""}
         columnWidth={columnWidth}
@@ -96,6 +100,7 @@ const App = () => {
         onDelete={handleTaskDelete}
         onProgressChange={handleProgressChange}
         onDoubleClick={handleDblClick}
+        onContextMenu={handleContextMenu}
         onClick={handleClick}
         onSelect={handleSelect}
         onExpanderClick={handleExpanderClick}

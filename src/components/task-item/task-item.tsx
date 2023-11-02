@@ -103,8 +103,12 @@ export const TaskItem: React.FC<TaskItemProps> = props => {
       onClick={e => {
         onEventStart("click", task, e);
       }}
-      onFocus={() => {
-        onEventStart("select", task);
+      // onFocus={() => {
+      //   onEventStart("select", task);
+      // }}
+      onContextMenu={e => {
+        e.preventDefault()
+        onEventStart("contextmenu", task,e);
       }}
     >
       {taskItem}
