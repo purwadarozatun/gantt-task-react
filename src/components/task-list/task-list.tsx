@@ -16,7 +16,7 @@ export type TaskListProps = {
   horizontalContainerClass?: string;
   selectedTask: BarTask | undefined;
   setSelectedTask: (task: string) => void;
-  onContextMenu?: (task: Task) => void;
+  onContextMenu?: (task: Task  ,event: any) => void;
   onExpanderClick: (task: Task) => void;
   TaskListHeader: React.FC<{
     headerHeight: number;

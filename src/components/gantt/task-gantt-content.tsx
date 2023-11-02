@@ -30,7 +30,7 @@ export type TaskGanttContentProps = {
   setGanttEvent: (value: GanttEvent) => void;
   setFailedTask: (value: BarTask | null) => void;
   setSelectedTask: (taskId: string) => void;
-  onContextMenu?: (task: BarTask) => void;
+  onContextMenu?: (task: BarTask ,event: any) => void;
 } & EventOption;
 
 export const TaskGanttContent: React.FC<TaskGanttContentProps> = ({
@@ -240,7 +240,7 @@ export const TaskGanttContent: React.FC<TaskGanttContentProps> = ({
     } else if (action === "click") {
       !!onClick && onClick(task);
     }else if (action === "contextmenu") {
-      !!onContextMenu && onContextMenu(task);
+      !!onContextMenu && onContextMenu(task , event);
     }
     // Change task event start
     else if (action === "move") {
