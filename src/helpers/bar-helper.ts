@@ -153,7 +153,6 @@ const convertToBar = (
 ): BarTask => {
   let x1: number;
   let x2: number;
-  console.log(task)
   if (rtl) {
     x2 = taskXCoordinateRTL(task.start, dates, columnWidth);
     x1 = taskXCoordinateRTL(task.end, dates, columnWidth);
